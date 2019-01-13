@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block titulo %}{% endblock %}</title>
+</head>
+<body>
+<ul>
+    <li><a href={% url 'index' %}>Inicio</a></li>
+    <li><a href={% url 'nuevodiario' %}>Nuevo diario</a></li>
+    <li><a href={% url 'nuevousuario' %}>Nuevo usuario</a></li>
+    <li><a href={% url 'nuevanoticia' %}>Nueva noticia</a></li>
+    <li><a href={% url 'nuevoautor' %}>Nuevo autor</a></li>
+    <li><a href={% url 'paises' %}>Diarios por paises</a></li>
+    <li><a href={% url 'interes' %}>Noticias que mas interesan</a></li>
+    <li><a href={% url 'buscar' %}>Buscar por autor</a></li>
+</ul>
+<h2>{% block encabezado %}{% endblock %}</h2>
+{% block contenido %}{% endblock %}
+</body>
+</html>

@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block titulo %}Autor{% endblock %}
+{% block encabezado %}Noticias por autor{% endblock %}
+{% block contenido %}
+    <ul>
+        {% for noticia in noticias %}
+            <li>{{ noticia.titular }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}

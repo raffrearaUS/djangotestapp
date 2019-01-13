@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block titulo %}Interes{% endblock %}
+{% block encabezado %}Noticias que mas interesan{% endblock %}
+{% block contenido %}
+    <ul>
+        {% for noticia in noticias|slice:':2' %}
+            <li>{{ noticia.titular }} - {{ noticia.interesados }} usuario(s) interesado(s)</li>
+        {% endfor %}
+    </ul>
+{% endblock %}

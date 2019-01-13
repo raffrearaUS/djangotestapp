@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block titulo %}Paises{% endblock %}
+{% block encabezado %}Diarios por paises{% endblock %}
+{% block contenido %}
+    {% for pais, diarios in paises.items %}
+        <h3>{{ pais }}</h3>
+        <ul>
+            {% for diario in diarios %}
+                <li>{{ diario.nombre }}</li>
+            {% endfor %}
+        </ul>
+    {% endfor %}
+{% endblock %}
