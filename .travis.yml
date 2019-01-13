@@ -1,7 +1,12 @@
 language: python
 python:
- - "3.6.6"
+- 3.6.6
 install:
- - pip install -r requirements-build.txt
+- pip install -r requirements-build.txt
 script:
- - ./manage.py test
+- "./manage.py test"
+deploy:
+  provider: heroku
+  api_key:
+    secure: CPTFvWKxzYm8oG5nQX82ge/1lDrrWrT4ORZjXBqSdqOvW9YVxlu7sSKSCyk9ysWpxGvK9Jz3za0p3S6HYR7D2rfP3s24kRGTDhTq1Gfy55rtgEjjvchhnKnoxYyw9w1NBoE2hrs0g9KyV4N3l+weF+jij9w71I7ijPBVAXZ30bGDk3JzIhWqjv7dzyH9uAyk25idTUA+8TpAQPrKU7FPiNsjnTM6lzhl3GdH0z8/AnF91GwKz5gorB5p7b8rikrnz6n6cRyIorrLrxUVpOIktHIE32n0cQ9r3e5zBHVxbfzrsSLQgyJ8A+RmYZDL5+GGqkov7ciugHewSBjVu5+KKAh6yAlo0KDw6VqJ61YEEfhRdCjdr+auhPk0sForVgbVGUpxa4XKvIzkSXsF9bTHAgcfobt9rr91w+VAvb9KPEy5FohVN8xwQFjOCgWpEKUyQPLvmy58KthPiYsPSP7Lxidpp5/cgw0ktFJAHZHlgYGZglPywyYrh6JAMQStVWOgJW9DUkMqU+7dYFyOyvhgooTE+/R+ADxd5l4vI0tXd+HRROVG1Xq/2l9ADvwOQjqLqB+cW0RDN0OI32oH8IR+v9Af/JZa8oHhWS//GezZgduioBkgJ0NEYjmHSD9Id8gM1BIvgjjK3Ote1UU9lgfT+hQljblbFlXIS2VheFcyC4k=
+  app: agile-mountain-73377
