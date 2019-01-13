@@ -1,2 +1,2 @@
-release: sh -c 'python manage.py migrate'
-web: sh -c 'cd practicaDjango1 && gunicorn practicaDjango1.wsgi'
+release: python manage.py migrate
+web: gunicorn practicaDjangoG1.wsgi
