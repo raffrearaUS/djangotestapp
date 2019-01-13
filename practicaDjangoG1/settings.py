@@ -123,6 +123,8 @@ STATIC_URL = '/static/'
 
 BASE_URL = 'https://agile-mountain-73377.herokuapp.com'
 
-import django_heroku
-
-django_heroku.settings(locals())
+try:
+    import django_heroku
+    django_heroku.settings(locals())
+except ImportError:
+    found = False
